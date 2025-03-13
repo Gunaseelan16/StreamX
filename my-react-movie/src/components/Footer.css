@@ -1,0 +1,24 @@
+.footer {
+    background-color: #E50914; /* Netflix red */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+    color: aqua;
+}
+
+.rating {
+    margin-top: 10px;
+    font-size: 18px;
+}

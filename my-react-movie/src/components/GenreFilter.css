@@ -1,0 +1,46 @@
+/* GenreFilter.css */
+
+.genre-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.genre-filter button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff6f61;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for larger screens */
+.genre-filter button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .genre-filter {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%; /* Reduce width for mobile */
+        margin: 0 auto;
+    }
+
+    .genre-filter button {
+        width: 100%; /* Make buttons take full width */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    .genre-filter {
+        gap: 2rem;
+    }
+}
