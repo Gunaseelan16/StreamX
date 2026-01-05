@@ -1,0 +1,77 @@
+/* Container styling */
+.genre-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background: #1c1c1c; /* dark background for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons */
+.genre-filter button {
+    position: relative;
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #fff;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover effect */
+.genre-filter button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.6);
+}
+
+/* Animated shine on hover */
+.genre-filter button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+    transform: skewX(-25deg);
+    transition: all 0.5s ease;
+}
+
+.genre-filter button:hover::after {
+    left: 125%;
+}
+
+/* Active genre effect */
+.genre-filter button.active {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .genre-filter {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .genre-filter button {
+        width: 100%;
+    }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    .genre-filter {
+        gap: 2rem;
+    }
+}

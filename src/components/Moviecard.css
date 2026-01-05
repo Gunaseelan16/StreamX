@@ -1,0 +1,69 @@
+.movie-card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+/* IMAGE */
+.movie-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* ✅ removes bottom gap */
+}
+
+/* HOVER OVERLAY */
+.movie-hover {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+/* SHOW INFO ONLY ON HOVER */
+.movie-card:hover .movie-hover {
+  opacity: 1;
+}
+
+/* TEXT */
+.movie-hover .desc {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.movie-hover .rating {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* 🌙 DARK MODE → WHITE ANIMATED GLOW */
+.movie-card.dark {
+  box-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+
+.movie-card.dark:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255,255,255,0.9);
+}
+
+/* ☀️ LIGHT MODE → RED ANIMATED GLOW */
+.movie-card.light {
+  box-shadow: 0 0 12px rgba(255,44,44,0.4);
+}
+
+.movie-card.light:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255,44,44,0.9);
+}

@@ -1,0 +1,13 @@
+/* Dark theme */
+.app.dark {
+  background: #0b0b0b;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Light theme */
+.app.light {
+  background: linear-gradient(180deg, #ffffff, #f2f2f2);
+  color: #111;
+  min-height: 100vh;
+}

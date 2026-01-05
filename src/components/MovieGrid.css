@@ -1,0 +1,115 @@
+.movie-row {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
+
+
+.movie-card {
+  position: relative;
+  min-width: 200px;
+  height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  cursor: pointer;
+  isolation: isolate; /* ✅ prevents overlap */
+}
+
+.movie-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.3)
+  );
+  opacity: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.35s ease;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+
+.movie-overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.movie-overlay p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+
+.movie-grid-container.dark .movie-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    #ffffff,
+    #bbbbbb,
+    #ffffff
+  );
+  z-index: -1;
+  opacity: 0;
+  animation: borderGlow 2.5s linear infinite;
+}
+
+.movie-grid-container.dark .movie-card:hover::before {
+  opacity: 1;
+}
+
+
+.movie-grid-container.light .movie-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    #ff1f1f,
+    #ff6a6a,
+    #ff1f1f
+  );
+  z-index: -1;
+  opacity: 0;
+  animation: borderGlow 2.5s linear infinite;
+}
+
+.movie-grid-container.light .movie-card:hover::before {
+  opacity: 1;
+}
+
+
+@keyframes borderGlow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+
+.movie-row {
+  display: flex;
+  gap: 10px; /* ✅ clean spacing */
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.movie-row::-webkit-scrollbar {
+  display: none;
+}
