@@ -7,7 +7,7 @@ const GenreFilter = () => {
     const section = document.getElementById(genre);
     if (!section) return;
 
-    const yOffset = -80; // 👈 navbar height
+    const yOffset = -80;
     const y =
       section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -17,7 +17,11 @@ const GenreFilter = () => {
   return (
     <div className="genre-filter">
       {genres.map((genre) => (
-        <button key={genre} onClick={() => scrollToGenre(genre)}>
+        <button
+          key={genre}
+          className="genre-btn"
+          onClick={() => scrollToGenre(genre)}
+        >
           {genre}
         </button>
       ))}

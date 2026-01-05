@@ -1,8 +1,12 @@
 import "./MovieCard.css";
 
-const MovieCard = ({ movie, theme }) => {
+const MovieCard = ({ movie, theme, onClick }) => {
   return (
-    <div className={`movie-card ${theme}`}>
+    <div
+      className={`movie-card ${theme}`}
+      onClick={() => onClick(movie.trailer)}
+    >
+      {/* Poster */}
       <img src={movie.image} alt={movie.title} />
 
       {/* Hover Overlay */}

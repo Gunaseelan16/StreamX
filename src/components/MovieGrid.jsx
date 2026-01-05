@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./MovieGrid.css";
-import MovieCard from "./MovieCard";
+import MovieCard from "./Moviecard.jsx";
+
 
 const MovieGrid = ({  theme = "dark" }) => {
   const [selectedTrailer, setSelectedTrailer] = useState(null);

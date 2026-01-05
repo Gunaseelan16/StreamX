@@ -113,3 +113,58 @@
 .movie-row::-webkit-scrollbar {
   display: none;
 }
+
+.genre-title {
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 25px 0 15px;
+  padding-left: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* 🔥 Red glowing bar on left */
+.genre-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 70%;
+  width: 4px;
+  background: linear-gradient(180deg, #ff2c2c, #ff6a6a);
+  box-shadow: 0 0 12px rgba(255, 44, 44, 0.9);
+  border-radius: 4px;
+}
+
+/* ✨ Bottom glow line */
+.genre-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 12px;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff2c2c, transparent);
+}
+
+/* DARK MODE → white glow */
+.App.dark .genre-title {
+  color: #fff;
+}
+
+.App.dark .genre-title::before {
+  background: linear-gradient(180deg, #ffffff, #cccccc);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.9);
+}
+
+/* LIGHT MODE → red glow */
+.App.light .genre-title {
+  color: #ffffff;
+}
+
+.App.light .genre-title::before {
+  background: linear-gradient(180deg, #ff2c2c, #ff6a6a);
+  box-shadow: 0 0 14px rgba(255, 44, 44, 0.9);
+}
