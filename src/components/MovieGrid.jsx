@@ -4,8 +4,9 @@ import MovieCard from "./MovieCard";
 
 
 
-const MovieGrid = ({  theme = "dark" }) => {
+const MovieGrid = ({ theme = "dark" }) => {
   const [selectedTrailer, setSelectedTrailer] = useState(null);
+
   const genres = ["Action", "Comedy", "Drama", "Romance", "Sci-Fi", "Series"];
   const rowRefs = useRef({});
 
