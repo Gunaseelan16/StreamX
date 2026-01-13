@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./MovieGrid.css";
-import MovieCard from "./MovieCard";
+
 
 
 
@@ -56,19 +56,18 @@ const MovieGrid = ({ theme = "dark" }) => {
     { id: 9, title: "Black Panther", genre: "Action", image: "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg", rating: "7.3/10", description: "King of Wakanda.", trailer: "https://www.youtube.com/embed/xjDjIWPwcPU" },
     { id: 10, title: "Iron Man", genre: "Action", image: "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg", rating: "7.9/10", description: "Birth of Iron Man.", trailer: "https://www.youtube.com/embed/8ugaeA-nMTc" },
 
-    // ================= COMEDY =================
-    { id: 11, title: "Deadpool", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg", rating: "8.0/10", description: "R-rated superhero comedy.", trailer: "https://www.youtube.com/embed/Xithigfg7dA" },
-    { id: 12, title: "The Mask", genre: "Comedy", image:  "https://m.media-amazon.com/images/M/MV5BZmY1ZGY4ODctN2Y5Zi00ZTY2LTk4ODItNDY0OTllZTY4ZTE3XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_.jpg", rating: "7.9/10", description: "Magical chaos comedy.", trailer: "https://www.youtube.com/embed/hOqVRwGVUkA" },
-    { id: 13, title: "Hangover", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/uluhlXubGu1VxU63X9VHCLWDAYP.jpg", rating: "7.7/10", description: "Vegas bachelor party gone wrong.", trailer: "https://www.youtube.com/embed/tcdUhdOlz9M" },
-    { id: 14, title: "Superbad", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: "7.6/10", description: "Teen friendship comedy.", trailer: "https://www.youtube.com/embed/4eaZ_48ZYog" },
-    { id: 15, title: "Step Brothers", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/2GQjRZ7P8K5rP6FzO7a5vWbVYcD.jpg", rating: "6.9/10", description: "Man-children siblings.", trailer: "https://www.youtube.com/embed/CewglxElBK0" },
-    { id: 16, title: "Home Alone", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/9wSbe4CwObACCQvaUVhWQyLR5Vz.jpg", rating: "7.7/10", description: "Kid vs burglars.", trailer: "https://www.youtube.com/embed/jEDaVHmw7r4" },
-    { id: 17, title: "Mr Bean", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/6oKxJcJpZVx8G8p3lVJzXj8zZ9F.jpg", rating: "8.5/10", description: "Physical comedy classic.", trailer: "https://www.youtube.com/embed/1s6oELqW2t8" },
-    { id: 18, title: "Yes Man", genre: "Comedy", image:  "https://image.tmdb.org/t/p/w500/4w8Q4wA7W5R5qCwK0K9mJwH4LwG.jpg", rating: "6.8/10", description: "Say yes to life.", trailer: "https://www.youtube.com/embed/dDh1l3qVNoY" },
-    { id: 19, title: "Free Guy", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", rating: "7.1/10", description: "NPC becomes hero.", trailer: "https://www.youtube.com/embed/X2m-08cOAbc" },
-    { id: 20, title: "Ted", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/yLdP2vDa1ZL3cOWV0iQidw1Zq9.jpg", rating: "6.9/10", description: "Talking teddy bear.", trailer: "https://www.youtube.com/embed/9fbo_pQvU7M" },
-
-   
+   // ================= COMEDY =================
+    { id: 1, title: "The Grand Budapest Hotel", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/eYeK0A7cF2xbKtYhWtQpBgZ9Lxx.jpg", rating: "8.1/10", description: "Quirky hotel adventures.", trailer: "https://www.youtube.com/embed/1Fg5iWmQjwk" },
+    { id: 2, title: "Superbad", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/ek8e8txUyUwd2BNqj6lFEerJfbq.jpg", rating: "7.6/10", description: "Teen friendship comedy.", trailer: "https://www.youtube.com/embed/4eaZ_48ZYog" },
+    { id: 3, title: "Deadpool", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg", rating: "8.0/10", description: "R-rated superhero comedy.", trailer: "https://www.youtube.com/embed/Xithigfg7dA" },
+    { id: 4, title: "The Hangover", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/uluhlXubGu1VxU63X9VHCLWDAYP.jpg", rating: "7.7/10", description: "Vegas bachelor party gone wrong.", trailer: "https://www.youtube.com/embed/tcdUhdOlz9M" },
+    { id: 5, title: "Bridesmaids", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/wDfkT7eL1oiNPYekMp5BViXq5Lr.jpg", rating: "6.8/10", description: "Wedding planning chaos.", trailer: "https://www.youtube.com/embed/FNppLrmdyug" },
+    { id: 6, title: "Airplane!", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/6itgbTXyNqVhQeGZPHuF1jmMY9A.jpg", rating: "7.7/10", description: "Classic slapstick spoof.", trailer: "https://www.youtube.com/embed/HMnVs287AJ4" },
+    { id: 7, title: "Step Brothers", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/2GQjRZ7P8K5rP6FzO7a5vWbVYcD.jpg", rating: "6.9/10", description: "Man-children siblings.", trailer: "https://www.youtube.com/embed/CewglxElBK0" },
+    { id: 8, title: "Monty Python and the Holy Grail", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/8AVb7tyxw3cGZ7QhQdG1mZ6NwD9.jpg", rating: "8.2/10", description: "Absurd medieval quest.", trailer: "https://www.youtube.com/embed/RDM75-oXGmQ" },
+    { id: 9, title: "Groundhog Day", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/gCgt1WARPZaXnq523ySQEUKinCs.jpg", rating: "8.0/10", description: "Reliving the same day.", trailer: "https://www.youtube.com/embed/GncQtURdcE4" },
+    { id: 10, title: "Mean Girls", genre: "Comedy", image: "https://image.tmdb.org/t/p/w500/2ZkuQXvVhh5x0HX8zK1eJZQK4gK.jpg", rating: "7.1/10", description: "High school social politics.", trailer: "https://www.youtube.com/embed/oDU84nmSDZY" },
+    
     // ================= DRAMA =================
 { id: 21, title: "The Shawshank Redemption", genre: "Drama", image: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg", rating: "9.3/10", description: "Hope inside prison walls.", trailer: "https://www.youtube.com/embed/6hB3S9bIaco" },
 { id: 22, title: "Forrest Gump", genre: "Drama", image: "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg", rating: "8.8/10", description: "Life is like a box of chocolates.", trailer: "https://www.youtube.com/embed/bLvqoHBptjg" },
